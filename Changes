@@ -1,0 +1,19 @@
+Revision history for Perl extension File::Archive.
+
+0.1  Thu Sep  2 20:56:11 1999
+	- original version; created by h2xs 1.19
+
+0.2  Thu Sep  2 21:46:00 1999
+	- Added new, filename, type
+
+0.3  Thu Sep  2 22:35:00 1999
+	- Added catalog method. Return contents of the file
+
+0.41 Thu Sep  2 23:01:00 1999
+	- Started on member method. Added some docs.
+
+0.5  Thu Sep  3 00:04:00 1999
+	- Got member method almost working. something.Z files don't
+	work yet. But maybe that's OK, since real people use gzip,
+	particularly on single files.
+
