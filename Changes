@@ -17,3 +17,7 @@ Revision history for Perl extension File::Archive.
 	work yet. But maybe that's OK, since real people use gzip,
 	particularly on single files.
 
+0.51 Thu Sep  3 00:53:00 1999
+	- Doh! Forgot to name the Readme the right thing, so CPAN
+	ignored it.
+

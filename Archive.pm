@@ -6,7 +6,7 @@ use Compress::Zlib;
 
 require Exporter;
 require AutoLoader;
-$File::Archive::VERSION = '0.5';
+$File::Archive::VERSION = '0.51';
 
 sub new	{
 	my ($class, $file) = @_;
