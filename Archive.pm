@@ -1,12 +1,8 @@
 package File::Archive;
-
 use strict;
-use Archive::Tar;
+use Archive::Tar qw(0.2);
 use Compress::Zlib;
-
-require Exporter;
-require AutoLoader;
-$File::Archive::VERSION = '0.51';
+$File::Archive::VERSION = '0.53';
 
 sub new	{
 	my ($class, $file) = @_;
@@ -71,8 +67,8 @@ sub member	{
 		$contents = $tar->get_content($file);
 	}  else  {
 		# Actually, there's two things here
-		if ($self->{filename} =~ /\.Z$/)	{
-			$contents = 'Not implemented yet.';
+		if ($self->{filename} =~ /\.(Z|zip|hqx|bz2?)$/)	{
+			$contents = undef;
 		} else { # it's a gz file
 			$gz=gzopen($self->{filename}, "rb") or die
 				"Can't open file: $gzerrno\n";
@@ -102,7 +98,6 @@ if ($^W)	{
 
 1;
 __END__
-# Below is the stub of documentation for your module. You better edit it!
 
 =head1 NAME
 

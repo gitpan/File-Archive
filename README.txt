@@ -28,7 +28,7 @@ something.tar.Z, or just something.
 PREREQUISITES
 
   Compress::Zlib
-  Archive::Tar
+  Archive::Tar version 0.2 or later
 
 BUGS
 
@@ -66,4 +66,11 @@ Revision history for Perl extension File::Archive.
 	- Got member method almost working. something.Z files don't
 	work yet. But maybe that's OK, since real people use gzip,
 	particularly on single files.
+
+0.53 Thu Dec 9 1999
+	- Changed it to require at least version 0.20 of Archive::Tar,
+	since an important function call seems to have changed name
+	between 0.07 and 0.20. Unfortunately, it seems that the various
+	members of the CPAN-Testers that tested my code all had
+	0.07 installed.
 
